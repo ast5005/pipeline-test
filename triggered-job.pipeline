@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+    triggers {
+        when {
+            cron params.cron
+        }
+            
+    }
+  stages {
+    
+    stage('Hello World') {
+      steps {
+        echo 'Hello World'
+        echo "${params.cronsetup}"
+      }
+    }
+  }
