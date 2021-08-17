@@ -15,7 +15,7 @@ node {
         str = filex.split('\n')
         for(String values:str)
         echo values
-        def pattern = "MM-dd-yyyy HH:mm:ss"
+        def pattern = "MM-dd-yyyy HH:mm"
         def input = str[0]
         echo str[0]
         def date = Date.parse(pattern, input2)
