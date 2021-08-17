@@ -16,9 +16,9 @@ node {
         for(String values:str)
         echo values
         def pattern = "MM-dd-yyyy HH:mm"
-        def input = str[0]
+        def RFCwindow = str[0]
         echo str[0]
-        def date = Date.parse(pattern, input2)
+        def date = Date.parse(pattern, RFCwindow)
         echo date.getDateTimeString()
         def job = Hudson.instance.getJob('trigger-test')
         def anotherBuild
