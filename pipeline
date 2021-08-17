@@ -20,7 +20,7 @@ node {
         echo date.getDateTimeString()
         def job = Hudson.instance.getJob('trigger-test')
         def anotherBuild
-        def cronparam = { date -> "TZ=America/Chicago \n ${date.minutes} ${date.hours} ${date.days} ${date.months} *" }
+        def cronparam = { date -> "TZ=America/Chicago \n ${date.minutes} ${date.hours} ${date.days} ${date.months} ${date.years}" }
        try {
             def params = [
                 new StringParameterValue('cron',cronparam(date))    
