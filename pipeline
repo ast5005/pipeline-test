@@ -9,9 +9,7 @@ node {
     stage('Test') { // for display purposes
         git branch: 'main', url: 'https://github.com/ast5005/pipeline-test.git'
         def filex = readFile './test'
-        echo "${filex}"
-        filePath = pwd()+'/test'
-        echo filePath
+        echo "${filex}"        
         str = filex.split('\n')
         for(String values:str)
         echo values
